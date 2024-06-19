@@ -1,0 +1,270 @@
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Black.ttf") format("ttf");
+}
+
+body {
+  margin: 0%;
+  border: 0px;
+  padding: 0%;
+  font-family: "poppins";
+  background-image: url("https://wallpaper.dog/large/20469718.jpg");
+  /* background-color:#222831; */
+}
+
+h1 {
+  margin: 0; /* Set margin to 0 */
+  border: 0;
+  padding: 20px;
+  text-align: center;
+  padding-left: 20px;
+  color: #f2f1eb;
+  padding-bottom: 5px;
+}
+
+h4 {
+  color: antiquewhite;
+  font-size: 30px;
+  color: #fd7014;
+}
+/* side bar style */
+
+/* Sidebar.css */
+
+.sidebar {
+  position: fixed;
+  left: -400px;
+  top: 0px;
+  width: 210px;
+  height: 100vh;
+  background-color: #393e46;
+  transition: 0.4s;
+  box-shadow: 1px slategrey;
+}
+#check {
+  position: absolute;
+  display: none;
+  font-size: 25px;
+}
+
+#cancel {
+  position: absolute;
+  left: -999px;
+  font-size: 25px;
+  transition: 0.4s;
+  z-index: 1;
+  color: #f2f1eb;
+}
+
+.footer {
+  position: absolute;
+  bottom: 30px;
+  color: #f2f1eb;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+#check:checked ~ .sidebar {
+  left: 0px;
+}
+
+#check:checked ~ #cancel {
+  left: 175px;
+  top: 20px;
+}
+
+#check:checked ~ #btn {
+  left: 180px;
+  z-index: 2;
+  opacity: 0;
+}
+#btn {
+  position: absolute;
+  left: 15px;
+  color: #f2f1eb;
+  top: 10px;
+  font-size: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.sidebar li {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+  border-bottom: 0.5px solid rgba(240, 240, 240, 0.2);
+}
+
+.sidebar li:hover {
+  background-color: #bdbdbd;
+  color: #393e46;
+  left: 2px;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .sidebar {
+    left: -200px; /* Move the sidebar off-screen initially on mobile */
+  }
+}
+
+.inp {
+  /* Normal Styles */
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+/* Responsive Styles using Media Queries */
+@media (max-width: 600px) {
+  input {
+    font-size: 14px;
+    border-radius: 8px;
+  }
+}
+/* form stlyling*/
+
+#inputbar {
+  width: 120%;
+  max-width: 900px;
+  background: #393e46;
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  padding: 10px 20px;
+}
+.chat-input-container {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+#inputbar input {
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  color: #ffffff;
+  
+}
+
+::placeholder {
+  color: azure;
+}
+#inputbar button {
+  border: 0;
+  border-radius: 0%;
+  width: 40px;
+  height: 30px;
+  border-radius: 15px;
+  background: #f2f1eb;
+  cursor: pointer;
+  margin: 5px;
+}
+.output {
+  color: aliceblue;
+  background-color: #555;
+  text-align: center;
+
+  width: 50%;
+  position: relative;
+  left: 270px;
+  top: 300px;
+  border-radius: 10px;
+}
+.chat-input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+}
+
+/* about page */
+
+#about-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  /* border: 1px solid #ccc; */
+  border-radius: 8px;
+
+  height: 110vh;
+}
+
+h2 :hover {
+  color: #bdbdbd;
+}
+
+.aboutpage h2,
+li,
+p {
+  font-family: "Poppins";
+  color: #ccc;
+}
+
+.aboutpage h2 {
+  color: #f2f1eb;
+  font-size: 25px;
+}
+.aboutpage p {
+  font-size: 18px;
+}
+
+#loading {
+  font-size: 20px;
+  color: #f2f1eb;
+}
+#button {
+  text-align: center;
+  background-color: #121010;
+  width: 150px;
+  display: flex;
+  position: relative;
+  left: 40%;
+}
+
+#button:hover {
+  background-color: #393434;
+}
+
+.aboutpage {
+  height: auto;
+  background-repeat: repeat;
+  background-size: contain;
+  background-image: url("https://lh3.googleusercontent.com/9zE3StG50FuHs9PCo6kMTIhWKyIc3vJ2JqxPZEgaKc8WQ2vzAyWR4wqYYhMZ7zkhc0C893COYflGKt70Sb15e4gg7eI=w640-h400-e365-rj-sc0x00ffffff");
+}
+
+/*contact page*/
+
+.contact {
+  height: 100vh;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactwarp {
+  width: 500px;
+}

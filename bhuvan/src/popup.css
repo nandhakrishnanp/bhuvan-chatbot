@@ -1,0 +1,98 @@
+#wrapper-voice {
+    background-color: rgb(240, 240, 240);
+    min-width: 350px;
+    width: fit-content;
+    max-width: 600px;
+    min-height: 250px;
+    height: fit-content;
+    border-radius: 15px;
+    padding: 10px;
+    word-wrap: break-word;
+    overflow: hidden;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+#mic {
+    color: aliceblue;
+    font-size: 55px;
+    padding: 15px;
+    border-radius: 40px;
+    box-shadow: 5px 5px 5px rgb(136, 133, 133);
+    background-color: rgba(53, 53, 53, 0.984);
+    box-shadow: 2px silver;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    animation: blik 2s infinite;
+}
+
+@keyframes blik {
+    from {
+        box-shadow: 5px 5px 5px rgb(136, 133, 133);
+        color: aliceblue;
+    }
+    to {
+        box-shadow: 5px 7px 5px rgb(177, 230, 255);
+        color: rgb(169, 215, 255);
+    }
+}
+
+#mic:hover {
+    transform: scale(1.1);
+    color: rgb(212, 221, 229);
+}
+
+#trans {
+    font-size: 18px;
+    margin: 0;
+    padding: 2px;
+    font-family: cursive, 'Times New Roman', Times, serif;
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#tap {
+    font-size: 25px;
+    font-family: 'Poppins';
+    animation: fadeInUp 1s ease-in-out;
+}
+ #mic , #tap {
+     position: relative;
+     top: 40px;
+ }
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#voicebg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(115, 106, 106, 0.612);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    animation: fadeIn 1s ease-in-out;
+}
